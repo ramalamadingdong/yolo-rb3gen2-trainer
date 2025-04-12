@@ -1,0 +1,41 @@
+# YOLO Training Configuration
+
+# Model Configuration
+model:
+  type: 'yolov8n'  # Options: yolov8n, yolov8s, yolov8m, yolov8l, yolov8x
+  pretrained: true    # Use pretrained weights
+
+# Dataset Configuration
+data:
+  train: 'data/train'  # Training data path
+  val: 'data/val'      # Validation data path
+  nc: 1               # Number of classes (update based on your dataset)
+
+# Training Configuration
+train:
+  epochs: 100         # Number of epochs
+  batch_size: 16       # Further reduced batch size for better stability
+  imgsz: 640         # Image size
+  device: 'cuda'      # Training device (cuda/cpu)
+  workers: 4         # Further reduced number of workers
+  project: 'runs/train'  # Project name
+  name: 'exp'        # Experiment name
+  exist_ok: true     # Overwrite existing experiment
+  pretrained: true   # Use pretrained weights
+  optimizer: 'SGD'   # Optimizer (SGD/Adam)
+  verbose: true      # Print verbose output
+  seed: 42          # Random seed for reproducibility
+  deterministic: true  # Use deterministic algorithms
+  single_cls: false  # Train as single-class dataset
+  rect: true        # Use rectangular training for better memory efficiency
+  cos_lr: true      # Use cosine learning rate scheduler
+  close_mosaic: 10  # Disable mosaic augmentation for final epochs
+  resume: false     # Resume training from last checkpoint
+  amp: true        # Disable mixed precision training for better stability
+  fraction: 1.0    # Fraction of dataset to use
+  label_smoothing: 0.0  # Label smoothing epsilon
+  nbs: 16          # Further reduced nominal batch size
+  overlap_mask: true  # Masks should overlap during training
+  mask_ratio: 4    # Mask downsample ratio
+  dropout: 0.0     # Use dropout regularization
+  val: true        # Validate model during training 

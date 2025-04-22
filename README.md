@@ -86,6 +86,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - Ultralytics YOLOv8
+- AI Hub Qualcomm
 - PyTorch
 - OpenCV
 - And all other open-source libraries used in this project
+

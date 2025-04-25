@@ -1,6 +1,11 @@
 # YOLO RB3Gen2 Trainer
 
 Instruction set for running powerful and efficient YOLOv8-based object detection training pipeline on **RB3Gen2**, optimized for custom dataset training with advanced configuration options. 
+# Some useful links
+
+[https://developer.android.com/tools/releases/platform-tools](ADB)
+
+[https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-253/demo_app.html](Set up of RB3Gen2)
 
 ## 🚀 Features
 
